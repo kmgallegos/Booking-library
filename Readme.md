@@ -31,7 +31,7 @@ import sqlite3
 from datetime import datetime
 
 #  Connect to an SQLite database (the database will be created if it doesn't exist)
-connection = sqlite3.connect('calendar.db')
+connection = sqlite3.connect('calendar.sqlite')
 
 # Create an instance of BookingCalendar
 from calendar_1 import BookingCalendar
