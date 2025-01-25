@@ -4,12 +4,12 @@ class BookingCalendar:
     def __init__(self, db_connection):
         self.db = Database(db_connection)
 
-    def add_time_slot(self, user_id, start_time, end_time, title="", description=""):
+        def add_time_slot(self, user_id, start_time, end_time, title="", description="", status=""):
         if not self.db._is_valid_uuid(user_id):
             raise ValueError("El user_id debe ser un UUID válido.")
         if self.check_conflict(user_id, start_time, end_time):
             raise ValueError("El time slot entra en conflicto con una reserva existente.")
-        self.db.add_time_slot(user_id, start_time, end_time, title, description)
+        self.db.add_time_slot(user_id, start_time, end_time, title, description, status)
 
     def set_doctor_buffer(self, user_id, buffer_minutes):
         if not self.db._is_valid_uuid(user_id):
