@@ -37,7 +37,7 @@ def test_add_time_slot_with_conflict(calendar):
 
     calendar.add_time_slot("5a78af51-8f88-4b8b-8b21-27334997d2b2", start_time, end_time)
 
-    with pytest.raises(ValueError, match="El espacio de tiempo entra en conflicto con una reserva existente."):
+    with pytest.raises(ValueError, match="El time slot entra en conflicto con una reserva existente."):
         calendar.add_time_slot("5a78af51-8f88-4b8b-8b21-27334997d2b2", start_time, end_time + timedelta(minutes=15))
 
 def test_set_doctor_buffer(calendar):
