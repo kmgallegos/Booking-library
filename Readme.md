@@ -97,7 +97,7 @@ calendar.edit_reservation(user_id, start_time, end_time, new_start_time, new_end
 
 Some methods require a valid `user_id:`, which must be a UUID. To verify that a `user_id:` is valid, you can use the following static method:
 ```python
-from booking_calendar import BookingCalendar
+from calendar_1 import BookingCalendar
 
 user_id = 'doctor-uuid'
 
