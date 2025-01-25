@@ -62,7 +62,7 @@ You can add a time slot for a doctor by specifying their ID, start time, end tim
 start_time = datetime(2025, 1, 24, 9, 0) 
 end_time = datetime(2025, 1, 24, 10, 0)   
 
-calendar.add_time_slot(user_id, start_time, end_time, title="Consulta General", description="Consulta de rutina")
+calendar.add_time_slot(user_id, start_time, end_time, title="Consulta General", description="Consulta de rutina", status = "RESERVED")
 ```
 
 If a booking already exists that overlaps with this time slot, a "ValueError" will be raised indicating a conflict.
